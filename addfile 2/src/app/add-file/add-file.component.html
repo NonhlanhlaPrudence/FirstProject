@@ -1,12 +1,34 @@
 <div class="container">
+  <div class="wrapper">
+    <h2>Angular Image Upload</h2>
+    <div class="file-upload">
+      <input
+        type="file"
+        name="image"
+        ng2FileSelect
+        [uploader]="uploader"
+        accept="image/x-png,image/gif,image/jpeg"
+      />
+      <button
+        type="button"
+        (click)="uploader.uploadAll()"
+        [disabled]="!uploader.getNotUploadedItems().length"
+      >
+        Upload
+      </button>
+    </div>
+  </div>
+</div>
+<!--Display all the files-->
 
-    <div class="wrapper">
-      <h2>Angular Image Upload </h2>
-      <div class="file-upload">
-        <input type="file" name="image" ng2FileSelect [uploader]="uploader" accept="image/x-png,image/gif,image/jpeg" />
-        <button type="button" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
-          Upload
-        </button>
-      </div>
-    </div>
-    </div>
+<div class="container">
+  <div class="center" *ngFor="let service of store">
+  
+        <div class="row">
+          <div class="col-md-2">
+            <img src="{{service.image}"  class="img-fluid" alt="Responsive image">
+          </div>
+        </div>
+  
+  </div>
+</div>

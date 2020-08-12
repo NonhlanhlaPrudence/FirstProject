@@ -5,7 +5,7 @@ import{HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class FileUploadService {
-  get_post='http://localhost:8080/api/upload/get';
+  get_post='http://localhost:8080//api/upload/get';
 
   constructor(private http:HttpClient) { }
 
