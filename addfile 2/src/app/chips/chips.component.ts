@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ElementRef, ViewChild} from '@angular/core';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
-import { ElementRef, ViewChild} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {MatAutocompleteSelectedEvent, MatAutocomplete} from '@angular/material/autocomplete';
 import {MatChipInputEvent} from '@angular/material/chips';
@@ -10,6 +9,7 @@ import {map, startWith} from 'rxjs/operators';
 /**
  * @title Chips Autocomplete
  */
+
 @Component({
   selector: 'app-chips',
   templateUrl: './chips.component.html',
@@ -31,8 +31,8 @@ export class ChipsComponent implements OnInit {
   fruits: string[] = ['Lemon'];
   allFruits: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
 
-  //@ViewChild('fruitInput') 
-  fruitInput: ElementRef<HTMLInputElement>;
+ // @ViewChild('fruitInput') 
+ fruitInput: ElementRef<HTMLInputElement>;
   //@ViewChild('auto')
    matAutocomplete: MatAutocomplete;
 
