@@ -51,6 +51,7 @@ import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { AppRoutingModule } from './app-routing.module';
 import { AddFileComponent } from './add-file/add-file.component';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +63,7 @@ import { AddFileComponent } from './add-file/add-file.component';
     BrowserModule,
     A11yModule,
     FormsModule,
+    HttpClientModule,
    // ClipboardModule,
     CdkStepperModule,
     CdkTableModule,

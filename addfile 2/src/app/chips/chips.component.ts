@@ -28,13 +28,15 @@ export class ChipsComponent implements OnInit {
   separatorKeysCodes: number[] = [ENTER, COMMA];
   fruitCtrl = new FormControl();
   filteredFruits: Observable<string[]>;
-  fruits: string[] = ['Lemon'];
-  allFruits: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
+  fruits: string[] = ['Kiwi'];
+  allFruits: string[] = ['Kiwi','Banana','Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
 
- // @ViewChild('fruitInput') 
- fruitInput: ElementRef<HTMLInputElement>;
-  //@ViewChild('auto')
-   matAutocomplete: MatAutocomplete;
+
+
+  //@ViewChild('fruitInput')
+   fruitInput: ElementRef<HTMLInputElement>;
+  //@ViewChild('auto') 
+  matAutocomplete: MatAutocomplete;
 
   constructor() {
     this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
